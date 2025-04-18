@@ -1,24 +1,31 @@
 [
   {
-    "objectID": "posts/welcome.html",
-    "href": "posts/welcome.html",
-    "title": "Welcome to My Blog",
+    "objectID": "posts.html",
+    "href": "posts.html",
+    "title": "Blog Posts",
     "section": "",
-    "text": "This is my first blog post. I’m excited to start sharing my thoughts and ideas with you.\n\n\nIn this blog, I’ll be sharing:\n\nMy experiences\nTutorials and how-tos\nThoughts on various topics\nAnd much more!\n\nStay tuned for more content coming soon."
+    "text": "Welcome to my blog posts page! Here you’ll find all my articles organized by date, category, and tags.\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\nWelcome to My Blog\n\n\n\ngeneral\n\n\n\n\n\n\n\n\n\nApr 18, 2025\n\n2 min\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "posts/welcome.html#what-to-expect",
-    "href": "posts/welcome.html#what-to-expect",
-    "title": "Welcome to My Blog",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Tony’s Blog",
     "section": "",
-    "text": "In this blog, I’ll be sharing:\n\nMy experiences\nTutorials and how-tos\nThoughts on various topics\nAnd much more!\n\nStay tuned for more content coming soon."
+    "text": "Welcome to my personal blog! Here I share my thoughts, ideas, and experiences about technology, programming, and more."
   },
   {
-    "objectID": "posts/python-advanced.html",
-    "href": "posts/python-advanced.html",
-    "title": "",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
     "section": "",
-    "text": "CodeShow All CodeHide All Code\n\n\n\n\nHello world!\n\n\nCode\nprint(\"Hello world!\")\n\n\nHello world!"
+    "text": "This is where you can write about yourself and your blog. Feel free to edit this content to tell your story.\n\n\nYou can reach me at lthnguyen27@gmail.com"
+  },
+  {
+    "objectID": "about.html#contact",
+    "href": "about.html#contact",
+    "title": "About",
+    "section": "",
+    "text": "You can reach me at lthnguyen27@gmail.com"
   },
   {
     "objectID": "docs/index.html",
@@ -28,38 +35,24 @@
     "text": "Welcome to my personal blog! Here I share my thoughts, ideas, and experiences about technology, programming, and more."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "This is where you can write about yourself and your blog. Feel free to edit this content to tell your story.\n\n\nYou can reach me at your-email@example.com"
-  },
-  {
-    "objectID": "about.html#contact",
-    "href": "about.html#contact",
-    "title": "About",
-    "section": "",
-    "text": "You can reach me at your-email@example.com"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
+    "objectID": "posts/welcome.html",
+    "href": "posts/welcome.html",
     "title": "Welcome to My Blog",
     "section": "",
-    "text": "Welcome to my personal blog! Here I share my thoughts, ideas, and experiences about technology, programming, and more."
+    "text": "Hello to whoever is reading this! You’re currently on my first ever blog post!\nI am no big writer and this is my first genuine attempt at creating and publishing posts that are meaningful to me. Writing has always been intimidating to me. I’ve always hated, it but this will serve as a starting point towards being more comfortable putting my ideas into words and sharing them online to super duper cool readers like you.\nThe main reason why I have decided to start blogging seriously is that I want to value creation over passive consumption and to keep track my learning and ideas.\n\n\nCurrently, I am CS student entering McGill University in Montreal Canada. I’m interested in AI, specifically anything related to LLMs whether that be research or engineering. I love to train models! I try my best, but it is a daunting task with many pitfalls. I am also a RAG enthusiast; I’d love to learn more about it and develop apps or systems.\n\n\n\nThere is nothing set in stone for the near future as of writing this. Although one promise that I’ll try to uphold is sharing technical things like my learning journey in AI and software development or my random thoughts on random things.\n\nYou’ve reached the end of my first ever blog post. This was just raw words from me. One day I will come back to this and cringe at it probably, but it is the risk that I am willing to take if the reward is becoming a better communicator.\nThanks for reading :)"
   },
   {
-    "objectID": "posts/python-intro.html",
-    "href": "posts/python-intro.html",
-    "title": "Introduction to Python",
+    "objectID": "posts/welcome.html#who-am-i",
+    "href": "posts/welcome.html#who-am-i",
+    "title": "Welcome to My Blog",
     "section": "",
-    "text": "This is a sample blog post using Python in Quarto. Let’s explore some basic Python concepts.\n\n\nCode\ndef greet(name):\n    return f\"Hello, {name}!\"\n\nprint(greet(\"Reader\"))\n\n\nHello, Reader!\n\n\n\n\nPython is a versatile programming language that’s great for:\n\nData analysis\nMachine learning\nWeb development\nAutomation\nAnd much more!\n\nStay tuned for more Python tutorials!"
+    "text": "Currently, I am CS student entering McGill University in Montreal Canada. I’m interested in AI, specifically anything related to LLMs whether that be research or engineering. I love to train models! I try my best, but it is a daunting task with many pitfalls. I am also a RAG enthusiast; I’d love to learn more about it and develop apps or systems."
   },
   {
-    "objectID": "posts/python-intro.html#why-python",
-    "href": "posts/python-intro.html#why-python",
-    "title": "Introduction to Python",
+    "objectID": "posts/welcome.html#what-to-expect",
+    "href": "posts/welcome.html#what-to-expect",
+    "title": "Welcome to My Blog",
     "section": "",
-    "text": "Python is a versatile programming language that’s great for:\n\nData analysis\nMachine learning\nWeb development\nAutomation\nAnd much more!\n\nStay tuned for more Python tutorials!"
+    "text": "There is nothing set in stone for the near future as of writing this. Although one promise that I’ll try to uphold is sharing technical things like my learning journey in AI and software development or my random thoughts on random things.\n\nYou’ve reached the end of my first ever blog post. This was just raw words from me. One day I will come back to this and cringe at it probably, but it is the risk that I am willing to take if the reward is becoming a better communicator.\nThanks for reading :)"
   }
 ]

@@ -1,14 +1,18 @@
 [
   {
-    "listing": "/docs/index.html",
-    "items": []
+    "listing": "/posts.html",
+    "items": [
+      "/posts/welcome.html"
+    ]
   },
   {
     "listing": "/index.html",
     "items": [
-      "/posts/python-advanced.html",
-      "/posts/python-intro.html",
       "/posts/welcome.html"
     ]
+  },
+  {
+    "listing": "/docs/index.html",
+    "items": []
   }
 ]
