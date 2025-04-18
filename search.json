@@ -1,0 +1,65 @@
+[
+  {
+    "objectID": "posts/welcome.html",
+    "href": "posts/welcome.html",
+    "title": "Welcome to My Blog",
+    "section": "",
+    "text": "This is my first blog post. I’m excited to start sharing my thoughts and ideas with you.\n\n\nIn this blog, I’ll be sharing:\n\nMy experiences\nTutorials and how-tos\nThoughts on various topics\nAnd much more!\n\nStay tuned for more content coming soon."
+  },
+  {
+    "objectID": "posts/welcome.html#what-to-expect",
+    "href": "posts/welcome.html#what-to-expect",
+    "title": "Welcome to My Blog",
+    "section": "",
+    "text": "In this blog, I’ll be sharing:\n\nMy experiences\nTutorials and how-tos\nThoughts on various topics\nAnd much more!\n\nStay tuned for more content coming soon."
+  },
+  {
+    "objectID": "posts/python-advanced.html",
+    "href": "posts/python-advanced.html",
+    "title": "",
+    "section": "",
+    "text": "CodeShow All CodeHide All Code\n\n\n\n\nHello world!\n\n\nCode\nprint(\"Hello world!\")\n\n\nHello world!"
+  },
+  {
+    "objectID": "docs/index.html",
+    "href": "docs/index.html",
+    "title": "Welcome to My Blog",
+    "section": "",
+    "text": "Welcome to my personal blog! Here I share my thoughts, ideas, and experiences about technology, programming, and more."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "This is where you can write about yourself and your blog. Feel free to edit this content to tell your story.\n\n\nYou can reach me at your-email@example.com"
+  },
+  {
+    "objectID": "about.html#contact",
+    "href": "about.html#contact",
+    "title": "About",
+    "section": "",
+    "text": "You can reach me at your-email@example.com"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome to My Blog",
+    "section": "",
+    "text": "Welcome to my personal blog! Here I share my thoughts, ideas, and experiences about technology, programming, and more."
+  },
+  {
+    "objectID": "posts/python-intro.html",
+    "href": "posts/python-intro.html",
+    "title": "Introduction to Python",
+    "section": "",
+    "text": "This is a sample blog post using Python in Quarto. Let’s explore some basic Python concepts.\n\n\nCode\ndef greet(name):\n    return f\"Hello, {name}!\"\n\nprint(greet(\"Reader\"))\n\n\nHello, Reader!\n\n\n\n\nPython is a versatile programming language that’s great for:\n\nData analysis\nMachine learning\nWeb development\nAutomation\nAnd much more!\n\nStay tuned for more Python tutorials!"
+  },
+  {
+    "objectID": "posts/python-intro.html#why-python",
+    "href": "posts/python-intro.html#why-python",
+    "title": "Introduction to Python",
+    "section": "",
+    "text": "Python is a versatile programming language that’s great for:\n\nData analysis\nMachine learning\nWeb development\nAutomation\nAnd much more!\n\nStay tuned for more Python tutorials!"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "listing": "/docs/index.html",
+    "items": []
+  },
+  {
+    "listing": "/index.html",
+    "items": [
+      "/posts/python-advanced.html",
+      "/posts/python-intro.html",
+      "/posts/welcome.html"
+    ]
+  }
+]
