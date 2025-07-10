@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>tony's blog - General</title><link href="https://nltuan.github.io/blog/" rel="alternate"></link><link href="https://nltuan.github.io/blog/feeds/general.atom.xml" rel="self"></link><id>https://nltuan.github.io/blog/</id><updated>2025-04-18T00:00:00-04:00</updated><entry><title>Welcome to My Blog</title><link href="https://nltuan.github.io/blog/welcome-to-my-blog.html" rel="alternate"></link><published>2025-04-18T00:00:00-04:00</published><updated>2025-04-18T00:00:00-04:00</updated><author><name>Le Tuan Huy Nguyen</name></author><id>tag:nltuan.github.io,2025-04-18:/blog/welcome-to-my-blog.html</id><summary type="html">&lt;h1&gt;Welcome to My Blog&lt;/h1&gt;
+&lt;p&gt;Hello to whoever is reading this! You're currently on my first ever blog post!&lt;/p&gt;
+&lt;p&gt;I am no big writer and this is my first genuine attempt at creating and publishing posts that are meaningful to me. 
+Writing has always been intimidating to me. I've always hated …&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Welcome to My Blog&lt;/h1&gt;
+&lt;p&gt;Hello to whoever is reading this! You're currently on my first ever blog post!&lt;/p&gt;
+&lt;p&gt;I am no big writer and this is my first genuine attempt at creating and publishing posts that are meaningful to me. 
+Writing has always been intimidating to me. I've always hated, it but this will serve as a starting point towards 
+being more comfortable putting my ideas into words and sharing them online to super duper cool readers like you.&lt;/p&gt;
+&lt;p&gt;The main reason why I have decided to start blogging seriously is that I want to value creation over passive consumption
+and to keep track my learning and ideas.&lt;/p&gt;
+&lt;h2&gt;Who am I?&lt;/h2&gt;
+&lt;p&gt;Currently, I am CS student entering McGill University in Montreal Canada. I'm interested in AI, specifically anything 
+related to LLMs whether that be research or engineering. I love to train models! I try my best, but it is a daunting task
+with many pitfalls. I am also a RAG enthusiast; I'd love to learn more about it and develop apps or systems.&lt;/p&gt;
+&lt;h2&gt;What to expect&lt;/h2&gt;
+&lt;p&gt;There is nothing set in stone for the near future as of writing this. Although one promise that I'll try to uphold is
+sharing technical things like my learning journey in AI and software development or my random thoughts on random things.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;You've reached the end of my first ever blog post. This was just raw words from me. One day I will come back to this and 
+cringe at it probably, but it is the risk that I am willing to take if the reward is becoming a better communicator.&lt;/p&gt;
+&lt;p&gt;Thanks for reading :)&lt;/p&gt;</content><category term="General"></category></entry></feed>
