@@ -1,1 +1,0 @@
-Sitemap: https://your-username.github.io/blog/sitemap.xml
