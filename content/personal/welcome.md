@@ -1,6 +1,7 @@
 Title: Welcome to My Blog
 Date: 2025-04-18
-Category: General
+Category: Personal
+Tags: welcome, introduction, blogging
 
 
 # Welcome to My Blog
