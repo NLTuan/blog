@@ -28,5 +28,18 @@ SOCIAL = (
 
 DEFAULT_PAGINATION = 10
 
+# Show excerpts on front page instead of full articles
+DEFAULT_ORPHANS = 0
+DEFAULT_PAGINATION = 5
+SUMMARY_MAX_LENGTH = 50
+
+# Enable summary support
+DISPLAY_PAGES_ON_MENU = True
+MENUITEMS = (
+    ('Archives', '/archives.html'),
+    ('Categories', '/categories.html'),
+    ('Tags', '/tags.html'),
+)
+
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True

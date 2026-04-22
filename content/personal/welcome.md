@@ -2,7 +2,7 @@ Title: Welcome to My Blog
 Date: 2025-04-18
 Category: Personal
 Tags: welcome, introduction, blogging
-
+Summary: Hello to whoever is reading this! You're currently on my first ever blog post! I am no big writer and this is my first genuine attempt at creating and publishing posts that are meaningful to me. Writing has always been intimidating to me, but this will serve as a starting point towards being more comfortable putting my ideas into words and sharing them online. The main reason why I have decided to start blogging seriously is that I want to value creation over passive consumption and to keep track my learning and ideas.
 
 # Welcome to My Blog
 

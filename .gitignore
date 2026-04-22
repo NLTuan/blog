@@ -208,3 +208,6 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Blog related things
+POST_FORMAT.md 

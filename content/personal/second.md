@@ -3,6 +3,7 @@ Date: 2025-09-24
 Category: Personal
 Tags: personal, career, research, update
 Author: Le Tuan Huy (Tony) Nguyen
+Summary: It has been a few months since my first and only blog post, and I'd love to get back into writing and sharing once again. I know that writing does me a lot of good in verbalizing my thoughts clearly. Since it has been so long, this blog is an update to what I have been working on throughout this summer.
 
 It has been a few months since my first and only blog post, and I'd love to get back into writing and sharing once again. I know that writing does me a lot of good in verbalizing my thoughts clearly. Since it has been so long, this blog is an update to what I have been working on throughout this summer.
 
