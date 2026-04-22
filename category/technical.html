@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="english">
+        <head>
+                        <meta charset="utf-8" />
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                        <meta name="generator" content="Pelican" />
+                        <title>tony's blog - Technical</title>
+                        <link rel="stylesheet" href="https://NLTuan.github.io/blog/theme/css/main.css" />
+                                <link href="https://NLTuan.github.io/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="tony's blog Atom Feed" />
+        </head>
+
+        <body id="index" class="home">
+                <header id="banner" class="body">
+                        <h1><a href="https://NLTuan.github.io/blog/">tony's blog</a></h1>
+                        <nav><ul>
+                                        <li><a href="/archives.html">Archives</a></li>
+                                        <li><a href="/categories.html">Categories</a></li>
+                                        <li><a href="/tags.html">Tags</a></li>
+                                                <li><a href="https://NLTuan.github.io/blog/pages/about-me.html">About Me</a></li>
+                                                <li><a href="https://NLTuan.github.io/blog/category/personal.html">Personal</a></li>
+                                                <li class="active"><a href="https://NLTuan.github.io/blog/category/technical.html">Technical</a></li>
+                        </ul></nav>
+                </header><!-- /#banner -->
+
+                <aside id="featured" class="body">
+                    <article>
+                        <h1 class="entry-title"><a href="https://NLTuan.github.io/blog/diffusion-transformer-from-scratch.html">Diffusion Transformer from scratch</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2026-04-21T00:00:00-04:00">
+                Published: Tue 21 April 2026
+        </abbr>
+
+                <address class="vcard author">
+                        By                                 <a class="url fn" href="https://NLTuan.github.io/blog/author/le-tuan-huy-tony-nguyen.html">Le Tuan Huy (Tony) Nguyen</a>
+                </address>
+        <p>In <a href="https://NLTuan.github.io/blog/category/technical.html">Technical</a>.</p>
+<p>tags: <a href="https://NLTuan.github.io/blog/tag/models.html">models</a> <a href="https://NLTuan.github.io/blog/tag/research.html">research</a> </p>        
+</footer><!-- /.post-info --><h1>Diffusion Transformer from scratch</h1>
+<p>In my journey of understanding the state of the art in end to end robotic policy training, I found a very very common paradigm that
+a lot of research labs have converted to which is to pivot towards diffusion-based models to model action chunks for robots to perform(DIFFUSION POLICY REF, PI 0 REF). Many of you reading are probably familiar with diffusion models in the context of image generation, and robot training policies are merely borrowing these same architectures. Initially, diffusion models were CNN based, but with the rise of transformers, they have found their way to sneak in as well: Enter the Diffusion Transformer. I have bestowed upon myself the task of reimplementing the paper that has introduced this architecture: Scalable Diffusion Models with Transformers (REF FOR DIFFUSION TRANSFORMER). In this paper, they showed that Diffusion Transformers had scalability properties and outperformed all prior diffusion models. For this implementation, I will be staying within the image generation space. (Pi 0 implementation coming soon!)</p>
+<p>The implementation of Diffusion Transformer will be split into it's constituent parts as Pytorch modules and then assembled as one DiT module. The parts consist of: Patchify, Conditionning Embeddings, DiT Block with adaLN-Zero, and output projection layers.</p>
+<p>However, the paper does not include the VAE that compresses the original image into a latent representation and instead opts into using a frozen pretrained VAE. This VAE allows the Diffusion Transformer to work in a smaller dimension, which reduces computational costs and makes training efficient.</p>
+<h1>Patchify</h1>
+<p>In order for Transformers to operate on images, we need to ensure that the images are of the shape that Transformers love, which look like a sequence of tokens with an embedding/hidden dimension (e.g. (batch, seq_len, dim)). However, images are of the shape (batch, channels, height, width). This can be changed by applying a <code>Conv2d</code> layer followed by a <code>reshape</code>. The <code>Conv2d</code> layer allows us to regroup squares of pixels into patches which get treated like tokens later on in the attention operations. Also, it allows for variable patch sizes, bigger patches will yield less "tokens", thus reducing compute complexity. For example, for a latent of shape (4, 32, 32), a patch size of 2, a <code>Conv2d(4, 1152, patch_size, patch_size)</code>, passing the latent through the convolutional layer yields an output of shape (4, 1152, 16, 16). This is not the desired shape yet, and a <code>reshape</code> operation must be applied. Calling <code>einsum.reshape(latent, 'b d h w -&gt; b (h w) d')</code> flattens the height and width dimension and puts the hidden dimension to the end, yielding something similar to that of an embedded token sequence. Now, this tranformed latent representation can undergo attention operations</p>
+<h1>References</h1>                    </article>
+                </aside><!-- /#featured -->
+                <section id="extras" class="body">
+                                <div class="blogroll">
+                                        <h2>links</h2>
+                                        <ul>
+                                                        <li><a href="https://getpelican.com/">Pelican</a></li>
+                                        </ul>
+                                </div><!-- /.blogroll -->
+                                <div class="social">
+                                        <h2>social</h2>
+                                        <ul>
+                                                        <li><a href="https://NLTuan.github.io/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+
+                                                        <li><a href="#">You can add links in your config file</a></li>
+                                                        <li><a href="#">Another social link</a></li>
+                                        </ul>
+                                </div><!-- /.social -->
+                </section><!-- /#extras -->
+
+                <footer id="contentinfo" class="body">
+                        <address id="about" class="vcard body">
+                                Proudly powered by <a rel="nofollow" href="https://getpelican.com/">Pelican</a>, which takes great advantage of <a rel="nofollow" href="https://www.python.org/">Python</a>.
+                        </address><!-- /#about -->
+
+                        <p>The theme is by <a rel="nofollow" href="https://www.smashingmagazine.com/2009/08/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+                </footer><!-- /#contentinfo -->
+
+        </body>
+</html>
