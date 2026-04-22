@@ -4,7 +4,7 @@
                         <meta charset="utf-8" />
                         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                         <meta name="generator" content="Pelican" />
-                        <title>tony's blog</title>
+                        <title>tony's blog - Personal</title>
                         <link rel="stylesheet" href="https://NLTuan.github.io/blog/theme/css/main.css" />
                                 <link href="https://NLTuan.github.io/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="tony's blog Atom Feed" />
         </head>
@@ -17,45 +17,14 @@
                                         <li><a href="/categories.html">Categories</a></li>
                                         <li><a href="/tags.html">Tags</a></li>
                                                 <li><a href="https://NLTuan.github.io/blog/pages/about-me.html">About Me</a></li>
-                                                <li><a href="https://NLTuan.github.io/blog/category/personal.html">Personal</a></li>
+                                                <li class="active"><a href="https://NLTuan.github.io/blog/category/personal.html">Personal</a></li>
                                                 <li><a href="https://NLTuan.github.io/blog/category/technical.html">Technical</a></li>
                         </ul></nav>
                 </header><!-- /#banner -->
 
                 <aside id="featured" class="body">
                     <article>
-                        <h1 class="entry-title"><a href="https://NLTuan.github.io/blog/diffusion-transformer-from-scratch.html">Diffusion Transformer from scratch</a></h1>
-<footer class="post-info">
-        <abbr class="published" title="2026-04-21T00:00:00-04:00">
-                Published: Tue 21 April 2026
-        </abbr>
-
-                <address class="vcard author">
-                        By                                 <a class="url fn" href="https://NLTuan.github.io/blog/author/le-tuan-huy-tony-nguyen.html">Le Tuan Huy (Tony) Nguyen</a>
-                </address>
-        <p>In <a href="https://NLTuan.github.io/blog/category/technical.html">Technical</a>.</p>
-<p>tags: <a href="https://NLTuan.github.io/blog/tag/models.html">models</a> <a href="https://NLTuan.github.io/blog/tag/research.html">research</a> </p>        
-</footer><!-- /.post-info --><h1>Diffusion Transformer from scratch</h1>
-<p>In my journey of understanding the state of the art in end to end robotic policy training, I found a very very common paradigm that
-a lot of research labs have converted to which is to pivot towards diffusion-based models to model action chunks for robots to perform(DIFFUSION POLICY REF, PI 0 REF). Many of you reading are probably familiar with diffusion models in the context of image generation, and robot training policies are merely borrowing these same architectures. Initially, diffusion models were CNN based, but with the rise of transformers, they have found their way to sneak in as well: Enter the Diffusion Transformer. I have bestowed upon myself the task of reimplementing the paper that has introduced this architecture: Scalable Diffusion Models with Transformers (REF FOR DIFFUSION TRANSFORMER). In this paper, they showed that Diffusion Transformers had scalability properties and outperformed all prior diffusion models. For this implementation, I will be staying within the image generation space. (Pi 0 implementation coming soon!)</p>
-<p>The implementation of Diffusion Transformer will be split into it's constituent parts as Pytorch modules and then assembled as one DiT module. The parts consist of: Patchify, Conditionning Embeddings, DiT Block with adaLN-Zero, and output projection layers.</p>
-<p>However, the paper does not include the VAE that compresses the original image into a latent representation and instead opts into using a frozen pretrained VAE. This VAE allows the Diffusion Transformer to work in a smaller dimension, which reduces computational costs and makes training efficient.</p>
-<h1>Patchify</h1>
-<p>In order for Transformers to operate on images, we need to ensure that the images are of the shape that Transformers love, which look like a sequence of tokens with an embedding/hidden dimension (e.g. (batch, seq_len, dim)). However, images are of the shape (batch, channels, height, width). This can be changed by applying a <code>Conv2d</code> layer followed by a <code>reshape</code>. The <code>Conv2d</code> layer allows us to regroup squares of pixels into patches which get treated like tokens later on in the attention operations. Also, it allows for variable patch sizes, bigger patches will yield less "tokens", thus reducing compute complexity. For example, for a latent of shape (4, 32, 32), a patch size of 2, a <code>Conv2d(4, 1152, patch_size, patch_size)</code>, passing the latent through the convolutional layer yields an output of shape (4, 1152, 16, 16). This is not the desired shape yet, and a <code>reshape</code> operation must be applied. Calling <code>einsum.reshape(latent, 'b d h w -&gt; b (h w) d')</code> flattens the height and width dimension and puts the hidden dimension to the end, yielding something similar to that of an embedded token sequence. Now, this tranformed latent representation can undergo attention operations</p>
-<h1>References</h1>                    </article>
-                </aside><!-- /#featured -->
-                    <section id="content" class="body">
-                        <h1>Other articles</h1>
-                        <hr />
-                        <ol id="posts-list" class="hfeed">
-
-                <li><article class="hentry">
-                    <header>
-                        <h1><a href="https://NLTuan.github.io/blog/what-i-am-working-on-currently.html" rel="bookmark"
-                               title="Permalink to What I am working on currently">What I am working on currently</a></h1>
-                    </header>
-
-                    <div class="entry-content">
+                        <h1 class="entry-title"><a href="https://NLTuan.github.io/blog/what-i-am-working-on-currently.html">What I am working on currently</a></h1>
 <footer class="post-info">
         <abbr class="published" title="2025-09-24T00:00:00-04:00">
                 Published: Wed 24 September 2025
@@ -66,10 +35,20 @@ a lot of research labs have converted to which is to pivot towards diffusion-bas
                 </address>
         <p>In <a href="https://NLTuan.github.io/blog/category/personal.html">Personal</a>.</p>
 <p>tags: <a href="https://NLTuan.github.io/blog/tag/personal.html">personal</a> <a href="https://NLTuan.github.io/blog/tag/career.html">career</a> <a href="https://NLTuan.github.io/blog/tag/research.html">research</a> <a href="https://NLTuan.github.io/blog/tag/update.html">update</a> </p>        
-</footer><!-- /.post-info -->                        <p>It has been a few months since my first and only blog post, and I'd love to get back into writing and sharing once again. I know that writing does me a lot of good in verbalizing my thoughts clearly. Since it has been so long, this blog is an update to what I have been working on throughout this summer.</p>
-                        <a class="readmore" href="https://NLTuan.github.io/blog/what-i-am-working-on-currently.html">read more</a>
-                    </div><!-- /.entry-content -->
-                </article></li>
+</footer><!-- /.post-info --><p>It has been a few months since my first and only blog post, and I'd love to get back into writing and sharing once again. I know that writing does me a lot of good in verbalizing my thoughts clearly. Since it has been so long, this blog is an update to what I have been working on throughout this summer.</p>
+<h2>Vision Language Action Models (VLAs) and Robotics</h2>
+<p>I am grateful to have been given the opportunity to work in an ML robotics project, which was something that I haven't anticipated beforehand. This project consists of controlling a robot to perform an action based on a verbal input. This leverages VLAs that produce actions that predict what actions the robot should take. VLAs are composed of 2 parts, a VLM (Vision Language Model) that processes text and image inputs and a Diffusion model that generates multiple actions. The architecture that we are currently using is <a href="https://huggingface.co/blog/smolvla">SmolVLA</a>. The <a href="https://github.com/huggingface/lerobot">lerobot</a> library is great for most of the tasks that we need to do. They include: recording data, training a policy, and running asynchronous inference. The robotics space is riddled with non-AI problems with hardware and Linux that I have had the privilege to never encounter beforehand.</p>
+<h2>LLM finetuning research</h2>
+<p>I am also active in LLM finetuning research with the Local Research Group in the <a href="https://course.fast.ai/">fast.ai</a> Discord. This project consists of comparing the efficacy of different finetuning techniques (full finetuning, LoRA, rsLoRA, DoRA) on domains of math and coding. We are looking for improvements whilst also retaining base model capabilities. I was tasked with model evaluation. For this, I used <a href="https://github.com/EleutherAI/lm-evaluation-harness">lm-evaluation-harness</a> for evaluation with VLLM support. Other ongoing tasks within the team are: custom modeling for efficient training, data decontamination, chat templates, etc. </p>
+<h2>Personal Learning</h2>
+<p>On the side, I am learning RL algorithms alongside Clusters of Stars, a group within the fast.ai Discord group. I have learned and implemented DQN (Deep Q Networks), Policy Gradient, and A2C (Actor-Critic) from scratch with PyTorch: <a href="https://github.com/NLTuan/rl_imps">RL Implementations</a>. This was to build my RL foundation that I have largely disregarded due to the scary math. Given enough time thinking and coding, these scary math notations become slightly less scary as my intuition develops (still super scary though!). This RL knowledge is crucial towards understanding how modern RL for post-training (PPO, DPO, GRPO) works.</p>
+<h2>Looking Forward</h2>
+<p>These experiences have been incredibly valuable in expanding my technical skills while also teaching me the importance of persistence when facing complex mathematical concepts. The intersection of robotics, LLMs, and RL continues to fascinate me, and I'm excited to share more detailed technical posts about these projects in the future.</p>                    </article>
+                </aside><!-- /#featured -->
+                    <section id="content" class="body">
+                        <h1>Other articles</h1>
+                        <hr />
+                        <ol id="posts-list" class="hfeed">
 
                 <li><article class="hentry">
                     <header>
