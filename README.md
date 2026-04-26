@@ -2,4 +2,4 @@
 
 welcome to tony's blog. read.
 
-https://nltuan.github.io/blog/
+https://nltuan.github.io
